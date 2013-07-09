@@ -101,20 +101,20 @@ if [ -z "$VCAP_REPO_BRANCH" ]; then
 fi
 
 # apt-get update
-run_cmd apt-get update
+#run_cmd apt-get update
 
 # Check if we have access to the web
-echo "Installing wget..."
-if ! run_cmd apt-get $APT_CONFIG install -qym wget; then
-  echo "Can't install prerequisite: wget"
-  exit 1
-fi
+#echo "Installing wget..."
+#if ! run_cmd apt-get $APT_CONFIG install -qym wget; then
+#  echo "Can't install prerequisite: wget"
+#  exit 1
+#fi
 
-echo "Checking web connectivity."
-if ! wget -q -T 2 -t 2 -O - http://api.cloudfoundry.com/info | grep "Cloud Application Platform" > /dev/null; then
-  echo "Giving up. Cannot connect to the web. Check your proxy settings if you are behind a proxy."
-  exit 1
-fi
+#echo "Checking web connectivity."
+#if ! wget -q -T 2 -t 2 -O - http://api.cloudfoundry.com/info | grep "Cloud Application Platform" > /dev/null; then
+#  echo "Giving up. Cannot connect to the web. Check your proxy settings if you are behind a proxy."
+#  exit 1
+#fi
 
 # Install chef
 readonly PREREQUISITES=(ruby ruby-dev libopenssl-ruby rdoc ri irb build-essential ssl-cert)
