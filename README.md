@@ -31,10 +31,14 @@ $ git clone https://github.com/ChenMingHe/package.git
 获取以后，根据https://github.com/ChenMingHe/package 中给的建议，将这些包放在相应的目录下即可。
 
 第二步、我们是准备maven的库，因为Cloud Foundry的时候需要从Maven的中央库上下载大量的依赖库，个人感觉这个速度是非常的慢的，
-所以我也将这部分的库全部弄出来了
->>>>>>>>>>>>>>>>
-待补充
-<<<<<<<<<<<<<<<<
+所以我也将这部分的库全部弄出来了，对应网址就是https://github.com/ChenMingHe/cfrepo 获取相应的包的时候，在目录 ： ~/.m2/repository
+ 中执行命令：
+
+$ cd  ~/.m2/repository
+
+$ git clone https://github.com/ChenMingHe/cfrepo
+
+通过这种方式，在编译过程中就少了大量下载Maven代码的过程。
 
 第三步、准备Cloud Foundry中需要源码，因为Cloud Foundry的源码一直在更新，我不知道会不会有一天，Chef会不再支持这些源码，所以我
 还是将这些源码准备下来了。如果本地有这些源码，在部署其他主机的时候，不妨就从中去获取，速度肯定比网上要快很多很多。
@@ -71,7 +75,7 @@ services : https://github.com/ChenMingHe/services
   + acm
   + services
 
-第四步、更换一个好一点的gem源
+第四步、更换一个好一点的gem源，因为国外的Gem源速度不行，下载起来会相当的慢，所以最好更换成国内的源。
 建议使用国内的淘宝源，执行命令：
 
 $ gem sources --remove http://rubygems.org/
