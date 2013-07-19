@@ -1,5 +1,5 @@
 vcap单节点部署方案
-====
+======
 
 
 Cloud Foundry源码，因为官方已经开始放弃Chef的安装部署方式，但是BOSH一直觉得太难，尤其对于没有IaaS平台的大家而言，BOSH简直就是一个噩梦，
@@ -75,7 +75,9 @@ services : https://github.com/ChenMingHe/services
 建议使用国内的淘宝源，执行命令：
 
 $ gem sources --remove http://rubygems.org/
+
 $ gem sources --add http://ruby.taobao.org/
+
 $ gem sources --update
 
 好了，如果能够做好这些步骤，那应该比官方的方式要快很多。
@@ -100,7 +102,7 @@ http://blog.csdn.net/wearenoth/article/details/8072799
 中查，国内的基本上没什么用了。
 
 最后，祝君顺利!!!!
-
+====
 
 
 
