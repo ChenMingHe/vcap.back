@@ -22,7 +22,7 @@ $ sudo apt-get install libncurses5 libncurses5-dev unixodbc unixodbc-dev libalie
 
 接下来的操作是为了能够更快的部署Chef而做准备。
 
-第一步，准备安装过程中需要的安装包，这些包我已经全部上传上来了，通过网址查看：https://github.com/ChenMingHe/package
+第一步，准备安装过程中需要的安装包，这些包我已经全部上传上来了，通过网址查看：     https://github.com/ChenMingHe/package
 
 如果本地已经有这些安装包，则将这些包直接拷贝到本地的： /var/cache/dev_setup  目录下即可。如果没有，也可以通过命令获取：
 
@@ -41,12 +41,19 @@ $ git clone https://github.com/ChenMingHe/package.git
 尤其是service的源码，现在Cloud Foundry的源码已经放在一个很深的目录中了，不太好找到。
 
 vcap : https://github.com/ChenMingHe/vcap
+
 cloud_controller : https://github.com/ChenMingHe/cloud_controller
+
 uaa : https://github.com/ChenMingHe/uaa
+
 stager : https://github.com/ChenMingHe/stager
+
 dea : https://github.com/ChenMingHe/dea
+
 router : https://github.com/ChenMingHe/router
+
 acm : https://github.com/ChenMingHe/acm
+
 services : https://github.com/ChenMingHe/services
 
 (注：其实我也不知道这个源码能否继续用下去，因为我总觉得一些重要的组件的源码我还没完全弄下来，如果有缺失，很可能某天就
